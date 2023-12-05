@@ -23,7 +23,7 @@ const {name, number} = form;
  const  handleSubmit = (e) => {
     e.preventDefault();
    
-    if (contacts.some((contact) => contact.name === form.name)) {
+    if (contacts.some((contact) => contact.name.toLowerCase() === form.name.toLowerCase())) {
       alert(`${form.name} already in contacts`);
       return;
     }
